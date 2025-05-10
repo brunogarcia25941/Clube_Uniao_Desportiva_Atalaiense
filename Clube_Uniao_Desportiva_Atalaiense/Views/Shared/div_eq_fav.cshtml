@@ -1,0 +1,95 @@
+﻿@page
+@model Clube_Uniao_Desportiva_Atalaiense.Views.Shared.div_eq_favModel
+@{
+}
+<style>
+    .body-div-eq-fav{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .body-div-eq-fav>h1{
+        background-color:black;
+    }
+
+    .body-div-eq-fav>.grid{
+        background-color:blue;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .body-div-eq-fav>.grid>.linha{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .body-div-eq-fav>.grid>.linha>.equipa {
+        background-color: red;
+        width: 33%;
+        margin: 10px;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .body-div-eq-fav > .grid > .linha > .equipa >.imagem-equipa{
+        height:150px;
+        width:95%;
+        background-color:yellow;
+        margin-left:2.5%;
+        margin-top:2.5%;
+        border-bottom-right-radius:15px;
+        border-bottom-left-radius:15px;
+
+    }
+                
+</style>
+
+<div class="body-div-eq-fav">
+    <h1>EQUIPAS FAVORITAS</h1>
+    <div class="grid">
+        
+        <div class="linha">
+            <div class="equipa"><div class="imagem-equipa"></div>
+                <p>TituloEquipa</p>
+                <p>Ultimo Resultado</p>
+                <p>Proximo Jogo</p></div>
+            <div class="equipa"><div class="imagem-equipa"></div>
+                <p>TituloEquipa</p>
+                <p>Ultimo Resultado</p>
+                <p>Proximo Jogo</p></div>
+            <div class="equipa"><div class="imagem-equipa"></div>
+                <p>TituloEquipa</p>
+                <p>Ultimo Resultado</p>
+                <p>Proximo Jogo</p></div>
+        </div>
+        <div class="linha">
+            <div class="equipa"><div class="imagem-equipa"></div>
+                <p>TituloEquipa</p>
+                <p>Ultimo Resultado</p>
+                <p>Proximo Jogo</p></div>
+            <div class="equipa"><div class="imagem-equipa"></div>
+                <p>TituloEquipa</p>
+                <p>Ultimo Resultado</p>
+                <p>Proximo Jogo</p></div>
+            <div class="equipa"><div class="imagem-equipa"></div>
+                <p>TituloEquipa</p>
+                <p>Ultimo Resultado</p>
+                <p>Proximo Jogo</p></div>
+        </div>
+        <div class="linha">
+            <div class="equipa"><div class="imagem-equipa"></div>
+                <p>TituloEquipa</p>
+                <p>Ultimo Resultado</p>
+                <p>Proximo Jogo</p></div>
+            <div class="equipa"><div class="imagem-equipa"></div>
+                <p>TituloEquipa</p>
+                <p>Ultimo Resultado</p>
+                <p>Proximo Jogo</p></div>
+            <div class="equipa"><div class="imagem-equipa"></div>
+                <p>TituloEquipa</p>
+                <p>Ultimo Resultado</p>
+                <p>Proximo Jogo</p></div>
+        </div>
+    </div>
+    </div>

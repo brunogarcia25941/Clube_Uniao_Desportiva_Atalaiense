@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clube_Uniao_Desportiva_Atalaiense", "Clube_Uniao_Desportiva_Atalaiense.csproj", "{DC05EAA9-0EA5-4B40-88C8-B95AE8FDEA17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clube_Uniao_Desportiva_Atalaiense", "Clube_Uniao_Desportiva_Atalaiense\Clube_Uniao_Desportiva_Atalaiense.csproj", "{F238A92B-87DA-4E7A-8750-0091F197B8C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DC05EAA9-0EA5-4B40-88C8-B95AE8FDEA17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC05EAA9-0EA5-4B40-88C8-B95AE8FDEA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC05EAA9-0EA5-4B40-88C8-B95AE8FDEA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC05EAA9-0EA5-4B40-88C8-B95AE8FDEA17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F238A92B-87DA-4E7A-8750-0091F197B8C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F238A92B-87DA-4E7A-8750-0091F197B8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F238A92B-87DA-4E7A-8750-0091F197B8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F238A92B-87DA-4E7A-8750-0091F197B8C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {719CF770-5D31-427C-A032-6CA9030CBD31}
+		SolutionGuid = {B67B1760-2A73-48E3-8353-4E006638ED87}
 	EndGlobalSection
 EndGlobal
