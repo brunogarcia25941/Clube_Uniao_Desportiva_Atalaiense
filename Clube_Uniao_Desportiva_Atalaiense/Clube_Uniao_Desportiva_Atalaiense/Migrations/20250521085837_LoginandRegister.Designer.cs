@@ -4,6 +4,7 @@ using Clube_Uniao_Desportiva_Atalaiense.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Clube_Uniao_Desportiva_Atalaiense.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250521085837_LoginandRegister")]
+    partial class LoginandRegister
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,7 +44,7 @@ namespace Clube_Uniao_Desportiva_Atalaiense.Migrations
 
             modelBuilder.Entity("Clube_Uniao_Desportiva_Atalaiense.Models.Favorito", b =>
                 {
-                    b.Property<string>("UtilizadorId")
+                    b.Property<string>("UtilizadorUsername")
                         .HasColumnType("nvarchar(450)")
                         .HasColumnOrder(0);
 
@@ -49,7 +52,7 @@ namespace Clube_Uniao_Desportiva_Atalaiense.Migrations
                         .HasColumnType("int")
                         .HasColumnOrder(1);
 
-                    b.HasKey("UtilizadorId", "EquipaId");
+                    b.HasKey("UtilizadorUsername", "EquipaId");
 
                     b.HasIndex("EquipaId");
 
@@ -148,6 +151,20 @@ namespace Clube_Uniao_Desportiva_Atalaiense.Migrations
                     b.HasKey("LojaId");
 
                     b.ToTable("Loja");
+                });
+
+            modelBuilder.Entity("Clube_Uniao_Desportiva_Atalaiense.Models.Utilizador", b =>
+                {
+                    b.Property<string>("Username")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Username");
+
+                    b.ToTable("Utilizadores");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -360,9 +377,9 @@ namespace Clube_Uniao_Desportiva_Atalaiense.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "Utilizador")
-                        .WithMany()
-                        .HasForeignKey("UtilizadorId")
+                    b.HasOne("Clube_Uniao_Desportiva_Atalaiense.Models.Utilizador", "Utilizador")
+                        .WithMany("Favoritos")
+                        .HasForeignKey("UtilizadorUsername")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -480,6 +497,11 @@ namespace Clube_Uniao_Desportiva_Atalaiense.Migrations
             modelBuilder.Entity("Clube_Uniao_Desportiva_Atalaiense.Models.Jogo", b =>
                 {
                     b.Navigation("JogadoresJogos");
+                });
+
+            modelBuilder.Entity("Clube_Uniao_Desportiva_Atalaiense.Models.Utilizador", b =>
+                {
+                    b.Navigation("Favoritos");
                 });
 #pragma warning restore 612, 618
         }
