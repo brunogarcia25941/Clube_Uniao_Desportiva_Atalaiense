@@ -2,11 +2,35 @@
     ViewData["Title"] = "Home Page";
 }
 
+<div class="container-fluid">
+    
+    <div class="row mb-4">
+        <div class="col-md-7">
+            <h2>Últimos Resultados</h2>
+            <div id="ultimos-resultados-container">
+                @* @await Html.PartialAsync("_UltimosResultadosPartial", Model.UltimosResultados) *@
+            </div>
+        </div>
+        <div class="col-md-5">
+            <h2>Destaque</h2>
+            <div id="destaque-equipa-container">
+                @*por agora vamos simplesmente usar o placeholder mas depois substitui se pelos dados dinamicos
+                <img> src="@Model.EquipaDestaque.ImagemUrl" class="img-fluid" alt "@Model.EquipaDestaque.Nome">
+                <p>@Model.EquipaDestaque.DescricaoBreve</p>*@
+                <img src="~/images/placeholder_equipa_destaque.png" class="img-fluid" alt="Equipa em Destaque">
+                <p>Equipa em Destaque</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="text-center">
     <h1 class="display-4">União Desportiva Atalaiense</h1>
     <p>União Desportiva Atalaiense</p>
     <!-- @Html.Partial("div_eq_fav")  -->
-    @Html.Partial("div_ult_res")
+    <!-- @Html.Partial("div_ult_res")  -->
     
 
 
